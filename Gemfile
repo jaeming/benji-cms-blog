@@ -1,6 +1,11 @@
 source 'https://rubygems.org'
 
+ruby "2.2.2"
 
+gem 'slim-rails'
+gem 'pry-rails'
+gem 'jeet'
+gem "breakpoint"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
@@ -46,6 +51,6 @@ end
 gem 'camaleon_cms'
 
 
-#################### Camaleon CMS include all gems for plugins and themes #################### 
-require './lib/plugin_routes' 
+#################### Camaleon CMS include all gems for plugins and themes ####################
+require './lib/plugin_routes'
 instance_eval(PluginRoutes.draw_gems)
