@@ -49,7 +49,6 @@ group :development, :test do
 end
 
 gem 'camaleon_cms'
-gem 'redis'
 
 #################### Camaleon CMS include all gems for plugins and themes ####################
 require './lib/plugin_routes'
