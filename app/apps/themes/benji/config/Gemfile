@@ -1,2 +1,2 @@
-gem 'jeet'
+gem 'jeet', :git => 'https://github.com/corysimmons/jeet-rails.git'
 gem 'breakpoint'
