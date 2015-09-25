@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+portfolio = PostType.find_or_create_by(slug: "portfolio")
+pages = PostType.find_or_create_by(slug: "page")
+posts = PostType.find_or_create_by(slug: "post")

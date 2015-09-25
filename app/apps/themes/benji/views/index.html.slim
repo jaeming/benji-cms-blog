@@ -1,0 +1,17 @@
+- @portfolio = PostType.find_by(slug: "portfolio")
+- @post = PostType.find_by(slug: "post")
+h2 Portfolio
+-if @portfolio
+  - @portfolio.posts.take(3).each do |portfolio|
+    h3
+      = portfolio.title
+    p
+      = raw portfolio.content
+hr/
+h2 Posts
+-if @post
+  - @post.posts.take(3).each do |post|
+    h3
+      = post.title
+    p
+      = raw post.content
