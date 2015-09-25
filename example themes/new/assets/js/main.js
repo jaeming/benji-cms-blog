@@ -10,4 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery-1.11.3.min.js
+//= require jquery
+//= require ./plugins/bootstrap/bootstrap.min.js
+//= require ./plugins/modal_elfinder

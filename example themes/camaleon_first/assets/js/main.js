@@ -10,4 +10,9 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery-1.11.3.min.js
+//= require jquery
+//= require bootstrap.min.js
+//= require ./modernizr.custom
+//= require ./magnific.min
+//= require ./hover.zoom
+//= require ./main-ver
