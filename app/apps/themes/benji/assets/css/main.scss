@@ -14,22 +14,14 @@
  *= require_self
  */
 
- @import 'jeet';
- @import 'breakpoint';
- @import 'variables';
+@import 'jeet';
+@import 'breakpoint';
+@import 'variables';
+@import 'columns';
+@import 'header';
 
- .box-col-2 {
-   @include column(1/2, $gutter: 7);
-   margin-top: 6rem;
-   margin-bottom: 6rem;
-   @include breakpoint($medium) {
-     @include stack();
-     margin-top: 1rem;
-     margin-bottom: 1rem;
-   }
- }
-.panel-heading {
-  @include breakpoint(500px) {
-    color: red;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-body;
 }

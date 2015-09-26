@@ -1,0 +1,72 @@
+@import "variables";
+@import 'jeet';
+@import 'breakpoint';
+
+header {
+  @include center(100%);
+  background-color: $color-secondary;
+  color: $color-light;
+}
+.header-main-container {
+  @include center(100%);
+}
+.header-login-container {
+  @include center(100%);
+}
+.header-title {
+  margin: 0;
+  font-family: $font-heading;
+  font-size: $font-xlarge;
+}
+.header-subtitle {
+  font-family: $font-body;
+  margin: 0;
+  font-size: $font-medium;
+}
+.header-img-container {
+  display: inline-block;
+  vertical-align: middle;
+  padding: .5rem 1.5rem .5rem .5rem;
+}
+.header-titles-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+.header-container {
+  @include column(1/2);
+}
+.header-nav {
+  @include column(1/2);
+}
+nav {
+  padding-top: 3rem;
+  text-align: right;
+  li {
+    display: inline;
+    padding: 0 1rem;
+    text-transform: uppercase;
+    a {
+      color: $color-light;
+      text-decoration: none;
+      transition: ease all 250ms;
+      &:hover {
+        color: $color-fifth;
+      }
+    }
+  }
+}
+.header-login-container {
+  @include center(100%);
+  background: $color-fifth;
+  padding: .6rem;
+  text-align: right;
+  a {
+    color: $color-light;
+    text-decoration: none;
+    transition: ease all 250ms;
+    padding: 0 1rem;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}

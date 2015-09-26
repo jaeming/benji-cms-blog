@@ -1,1 +1,62 @@
-$medium: max-width 500px;
+//COLOR PALETTE
+$color-main: #354458;
+$color-secondary: #3A9AD9;
+$color-dark: #555555;
+$color-light: whitesmoke;
+$color-third: #29ABA4;
+$color-fourth: #E9E0D6;
+$color-fifth: #EB7260;
+
+//TYPOGRAPHY
+@import url(http://fonts.googleapis.com/css?family=Lobster|Arimo:400,700);
+$font-heading: 'Lobster', cursive;
+$font-body: 'Arimo', sans-serif;
+$font-xlarge: 3rem;
+$font-large: 2rem;
+$font-medium: 1.3rem;
+$font-small: 1rem;
+$font-xsmall: .75rem;
+
+//SIZES
+$xlarge: 1680px;
+$large: 1280px;
+$medium: 980px;
+$small: 736px;
+$xsmall: 480px;
+
+//BREAKPOINT SIZES (MEDIA QUERIES)
+$xlarge-max: max-width 1679px;
+$large-max: max-width 1279px;
+$medium-max: max-width 979px;
+$small-max: max-width 735px;
+$xsmall-max: max-width 479px;
+
+//BUTTONS
+.button-1 {
+  padding: .9rem .65rem .65rem .65rem;
+  border: .18rem solid $color-light;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  color: $color-light;
+  text-align: center;
+  text-decoration: none;
+  transition: all 350ms ease;
+  cursor: pointer;
+    &:hover {
+      background: rgba($color-light,0.2)
+    }
+}
+.button-2 {
+  padding: .9rem .65rem .65rem .65rem;
+  border: .18rem solid $color-dark;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  color: $color-dark;
+  text-align: center;
+  text-decoration: none;
+  transition: all 350ms ease;
+  cursor: pointer;
+    &:hover {
+      background: rgba($color-dark,0.2)
+    }
+}
