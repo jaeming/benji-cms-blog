@@ -8,7 +8,7 @@ html lang="en"
     meta content="width=device-width, initial-scale=1" name="viewport" /
     /! END META SECTION
     = stylesheet_link_tag theme_asset_path("css/main")
-    link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" /
+    link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" /
     = javascript_include_tag theme_asset_path("js/main.js")
     = raw the_head
   body
@@ -27,12 +27,24 @@ html lang="en"
         - if signin?
           img src="=current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
           =current_user.username
-          a href="=admin_dashboard_path"  Dashboard
-          a href="=admin_profile_path"  Profile
-          a href="=admin_logout_path"  Logout
+          ul.admin
+            li
+              a href="=admin_dashboard_path"  
+                p.fa.fa-cogs Dashboard
+            li  
+              a href="=admin_profile_path"  
+                p.fa.fa-user Profile
+            li  
+              a href="=admin_logout_path"  
+                p.fa.fa-sign-out Logout
         - else
-          a href="=admin_login_path" Login
-          a href="=admin_register_path" Register
+          ul.admin
+            li
+              a href="=admin_login_path" 
+                p.fa.fa-sign-in Login
+            li    
+              a href="=admin_register_path" 
+                p.fa.fa-pencil-square-o Register
     .content
       = yield
     footer

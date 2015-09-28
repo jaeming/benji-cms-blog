@@ -10,9 +10,6 @@ header {
 .header-main-container {
   @include center(100%);
 }
-.header-login-container {
-  @include center(100%);
-}
 .header-title {
   margin: 0;
   font-family: $font-heading;
@@ -58,7 +55,7 @@ nav {
 .header-login-container {
   @include center(100%);
   background: $color-fifth;
-  padding: .6rem;
+  padding: 0 .6rem;
   text-align: right;
   a {
     color: $color-light;
@@ -68,5 +65,14 @@ nav {
     &:hover {
       color: $color-secondary;
     }
+  }
+}
+.admin {
+  ul {
+    margin: 0;
+    list-style-type: none;
+  }
+  li {
+    display: inline;
   }
 }
