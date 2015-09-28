@@ -30,21 +30,21 @@ html lang="en"
               img src="=current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
               =current_user.username
             li
-              a href="=admin_dashboard_path"  
+              = link_to admin_dashboard_path
                 p.fa.fa-cogs Dashboard
             li  
-              a href="=admin_profile_path"  
+              = link_to admin_profile_path
                 p.fa.fa-user Profile
             li  
-              a href="=admin_logout_path"  
+              = link_to admin_logout_path 
                 p.fa.fa-sign-out Logout
         - else
           ul.admin
             li
-              a href="=admin_login_path" 
+              = link_to admin_login_path
                 p.fa.fa-sign-in Login
             li    
-              a href="=admin_register_path" 
+              = link_to admin_register_path
                 p.fa.fa-pencil-square-o Register
     .content
       = yield
