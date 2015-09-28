@@ -159,7 +159,7 @@ class FrontendController < CamaleonController
       @post_type = @post.the_post_type
       @comments = @post.the_comments
       @categories = @post.the_categories
-      @post.increment_visits!
+      # @post.increment_visits!
       home_page = @_site_options[:home_page] rescue nil
       r_file = ""
       if lookup_context.template_exists?("page_#{@post.id}")
