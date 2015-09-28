@@ -16,7 +16,8 @@ html lang="en"
       .header-main-container
         .header-container
           .header-img-container
-            a href="=root_path" = image_tag current_site.the_logo, class: "img-responsive"
+            = link_to root_path 
+              = image_tag current_site.the_logo, class: "img-responsive"
           .header-titles-container
             h1.header-title= current_site.the_title
             h2.header-subtitle= current_site.the_content
