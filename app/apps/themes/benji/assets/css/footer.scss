@@ -1,0 +1,29 @@
+@import "variables";
+@import 'jeet';
+@import 'breakpoint';
+
+footer {
+  @include center(100%);
+  background-color: $color-fifth;
+  height: 4.5rem;
+  text-align: center;
+  font-size: $font-xsmall;
+  color: $color-light;
+  a {
+    color: $color-light;
+    text-decoration: none;
+    transition: ease all 250ms;
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+  ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline;
+    padding: 0 .75rem;
+  }
+}
