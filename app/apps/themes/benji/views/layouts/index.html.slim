@@ -25,9 +25,10 @@ html lang="en"
             = raw get_nav_menu('main_menu', 'menu')
       .header-login-container      
         - if signin?
-          img src="=current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
-          =current_user.username
           ul.admin
+            li
+              img src="=current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
+              =current_user.username
             li
               a href="=admin_dashboard_path"  
                 p.fa.fa-cogs Dashboard
