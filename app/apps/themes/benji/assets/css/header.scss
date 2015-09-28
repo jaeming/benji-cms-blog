@@ -4,7 +4,7 @@ header {
   color: $color-light;
 }
 .header-main-container {
-  @include center(100%);
+  @include center($medium);
 }
 .header-title {
   margin: 0;
@@ -49,9 +49,9 @@ nav {
   }
 }
 .header-login-container {
-  @include center(100%);
+  @include center($medium);
   background: $color-fifth;
-  padding: 0 .6rem;
+  padding: 0;
   text-align: right;
   a {
     color: $color-light;
@@ -64,10 +64,9 @@ nav {
   }
 }
 .admin {
-  ul {
-    margin: 0;
-    list-style-type: none;
-  }
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
   li {
     display: inline;
   }

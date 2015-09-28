@@ -1,15 +1,18 @@
-h2 Portfolio
--if @portfolio_posts
-  - @portfolio_posts.each do |portfolio|
-    h3
-      = portfolio.title
-    p
-      = raw portfolio.content
-hr/
-h2 Posts
--if @posts
-  - @posts.each do |post|
-    h3
-      = post.title
-    p
-      = raw post.content
+#portfolio
+  h2.title-with-lines 
+    span Portfolio
+  -if @portfolio_posts
+    - @portfolio_posts.each do |portfolio|
+      h3
+        = portfolio.title
+      p
+        = raw portfolio.content
+#posts
+h2.title-with-lines 
+  span Posts
+  -if @posts
+    - @posts.each do |post|
+      h3
+        = post.title
+      p
+        = raw post.content
