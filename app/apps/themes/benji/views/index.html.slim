@@ -1,8 +1,12 @@
 #portfolio
   h2.title-with-lines
     span Portfolio
-  -if @portfolio_posts
-    - @portfolio_posts.each do |portfolio|
+  - if @portfolio_posts
+    - @portfolio_posts.each do |entry|
+      - portfolio = entry.decorate
+      - if portfolio.has_thumb?
+        .entry-thumbnail
+          = raw portfolio.the_thumb
       h3
         = portfolio.title
       p
@@ -10,14 +14,15 @@
 #posts
 h2.title-with-lines
   span Latest Posts
-  -if @posts
-    - @posts.each do |post|
+  - if @posts
+    - @posts.each do |entry|
+      - post = entry.decorate
       h3.post-title
         span
           = post.title
       p.post-date
-        span 
+        span
           | add post date
-      .post-text-container    
+      .post-text-container
         p
           = raw post.content
