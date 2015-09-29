@@ -5,7 +5,7 @@
     - @portfolio_posts.each do |entry|
       - portfolio = entry.decorate
       - if portfolio.has_thumb?
-        = link_to portfolio.slug + ".html"
+        = link_to "#{portfolio.slug}.html"
           .entry-thumbnail
             = raw portfolio.the_thumb
       h3
@@ -20,7 +20,7 @@ h2.title-with-lines
       - post = entry.decorate
       h3.post-title
         span
-          = link_to post.slug + ".html"
+          = link_to "#{post.slug}.html"
             = post.the_title
       p.post-date
         span
