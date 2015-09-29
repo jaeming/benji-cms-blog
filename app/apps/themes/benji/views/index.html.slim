@@ -22,7 +22,7 @@ h2.title-with-lines
           = post.title
       p.post-date
         span
-          | add post date
+          = post.created_at.strftime("%d %B %Y")
       .post-text-container
         p
           = raw post.content
