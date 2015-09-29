@@ -5,8 +5,9 @@
     - @portfolio_posts.each do |entry|
       - portfolio = entry.decorate
       - if portfolio.has_thumb?
-        .entry-thumbnail
-          = raw portfolio.the_thumb
+        = link_to portfolio.slug + ".html"
+          .entry-thumbnail
+            = raw portfolio.the_thumb
       h3
         = portfolio.the_title
       p
