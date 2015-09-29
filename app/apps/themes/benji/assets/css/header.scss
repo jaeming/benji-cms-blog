@@ -1,10 +1,14 @@
 header {
   @include center(100%);
-  background-color: $color-secondary;
+  background-image: url(https://images.unsplash.com/photo-1437422061949-f6efbde0a471?q=80&fm=jpg&s=e23055c9ba7686b8fe583fb8318a1f88);
+  background-position: center;
+  background-size: cover;
   color: $color-light;
+  height: 30rem;
 }
 .header-main-container {
   @include center($medium);
+  padding-top: 6.5rem;
 }
 .header-title {
   margin: 0;
@@ -17,42 +21,59 @@ header {
   font-size: $font-medium;
 }
 .header-img-container {
-  display: inline-block;
   vertical-align: middle;
   padding: .5rem 1.5rem .5rem .5rem;
+  text-align: center;
 }
 .header-titles-container {
-  display: inline-block;
   vertical-align: middle;
+  text-align: center;
 }
 .header-container {
-  @include column(1/2);
+  @include center(100%);
+}
+.header-nav-container {
+  width: 100%;
+  position: fixed;
+  padding-top: 2.25rem;
+  z-index: 100;
 }
 .header-nav {
-  @include column(1/2);
+  @include center($medium);
+  background-color: $color-light;
+  color: $color-dark;
+  border-bottom: 4px solid rgba($color-secondary, .4);
 }
 nav {
-  padding-top: 3rem;
-  text-align: right;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  ul {
+    padding: 0;
+  }
   li {
     display: inline;
     padding: 0 1rem;
     text-transform: uppercase;
     a {
-      color: $color-light;
+      color: $color-dark;
       text-decoration: none;
       transition: ease all 250ms;
       &:hover {
         color: $color-fifth;
+        border-bottom: 1rem solid $color-fifth;
       }
     }
   }
 }
 .header-login-container {
-  @include center($medium);
-  background: $color-fifth;
+  width: 100%;
+  background: $color-secondary;
   padding: 0;
-  text-align: right;
+  text-align: center;
+  font-size: $font-xsmall;
+  position: fixed;
+  z-index: 100;
   a {
     color: $color-light;
     text-decoration: none;
@@ -70,4 +91,7 @@ nav {
   li {
     display: inline;
   }
+}
+.img-responsive {
+  max-width: 7.5rem; 
 }

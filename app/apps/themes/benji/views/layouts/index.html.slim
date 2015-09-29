@@ -2,7 +2,7 @@ doctype html
 html lang="en"
   head
     /! META SECTION
-    title My theme
+    title Benji Dalton
     meta content=("text/html; charset=US-ASCII") http-equiv="Content-Type" /
     meta content="IE=edge" http-equiv="X-UA-Compatible" /
     meta content="width=device-width, initial-scale=1" name="viewport" /
@@ -13,17 +13,6 @@ html lang="en"
     = raw the_head
   body
     header
-      .header-main-container
-        .header-container
-          .header-img-container
-            = link_to root_path 
-              = image_tag current_site.the_logo, class: "img-responsive"
-          .header-titles-container
-            h1.header-title= current_site.the_title
-            h2.header-subtitle= current_site.the_content
-        .header-nav    
-          nav 
-            = raw get_nav_menu('main_menu', 'menu')
       .header-login-container      
         - if signin?
           ul.admin
@@ -47,6 +36,19 @@ html lang="en"
             li    
               = link_to admin_register_path
                 p.fa.fa-pencil-square-o Register
+      .header-nav-container
+        .header-nav    
+          nav 
+            = raw get_nav_menu('main_menu', 'menu')          
+      .header-main-container
+        .header-container
+          .header-img-container
+            = link_to root_path 
+              = image_tag current_site.the_logo, class: "img-responsive"
+          .header-titles-container
+            h1.header-title= current_site.the_title
+            h2.header-subtitle= current_site.the_content
+        
     .content
       = yield
     footer

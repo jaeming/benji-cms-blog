@@ -20,7 +20,7 @@
   color: rgba($color-dark, 0.6);
   letter-spacing: .4rem;
   &:before {
-    border-top: 4px dotted rgba($color-dark, 0.3);
+    border-top: 4px solid rgba($color-dark, 0.3);
     content: "";
     position: absolute;
     top: 50%;
@@ -29,7 +29,7 @@
     z-index: -1;
   }
   span {
-    background-color: white;
+    background-color: $color-light;
     padding: 0 1.6rem 0 2rem;
   }
 }
