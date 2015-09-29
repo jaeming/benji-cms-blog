@@ -8,9 +8,9 @@
         .entry-thumbnail
           = raw portfolio.the_thumb
       h3
-        = portfolio.title
+        = portfolio.the_title
       p
-        = raw portfolio.content
+        = raw portfolio.the_content
 #posts
 h2.title-with-lines
   span Latest Posts
@@ -19,10 +19,11 @@ h2.title-with-lines
       - post = entry.decorate
       h3.post-title
         span
-          = post.title
+          = link_to post.slug + ".html"
+            = post.the_title
       p.post-date
         span
           = post.created_at.strftime("%d %B %Y")
       .post-text-container
         p
-          = raw post.content
+          = raw post.the_content
