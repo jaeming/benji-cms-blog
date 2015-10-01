@@ -1,25 +1,17 @@
 header
-  .header-login-container
-    - if signin?
-      ul.admin
-        li
-          img src="= current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
-          = current_user.username
-        li
-          = link_to admin_dashboard_path
-            p.fa.fa-cogs Dashboard
-        li
-          = link_to admin_profile_path
-            p.fa.fa-user Profile
-        li
-          = link_to admin_logout_path
-            p.fa.fa-sign-out Logout
-    - else
-      ul.admin
-        li
-          = link_to admin_login_path
-            p.fa.fa-sign-in Login
-        li
-          = link_to admin_register_path
-            p.fa.fa-pencil-square-o Register
+  - if signin?
+    .header-login-container
+        ul.admin
+          li
+            img src="= current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
+            = current_user.username
+          li
+            = link_to admin_dashboard_path
+              p.fa.fa-cogs Dashboard
+          li
+            = link_to admin_profile_path
+              p.fa.fa-user Profile
+          li
+            = link_to admin_logout_path
+              p.fa.fa-sign-out Logout
   = render partial: 'partials/nav'

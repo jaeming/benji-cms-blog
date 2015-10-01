@@ -1,7 +1,13 @@
-.header-nav-container
-  .header-nav
-    nav
-      = raw get_nav_menu('main_menu', 'menu')
+- if signin?
+  .header-nav-container
+    .header-nav
+      nav
+        = raw get_nav_menu('main_menu', 'menu')
+- else
+  .header-nav-container style=("padding-top: 0rem;")
+    .header-nav
+      nav
+        = raw get_nav_menu('main_menu', 'menu')
 .header-main-container
   .header-container
     .header-img-container
