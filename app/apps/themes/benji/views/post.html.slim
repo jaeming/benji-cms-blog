@@ -1,19 +1,10 @@
-article#post
-  header.entry-header
+= render partial: 'partials/header_small'
+.content
+  article#post
     - if @post.has_thumb?
       .entry-thumbnail
         = raw @post.the_thumb
     h1.entry-title= raw @post.the_title
-  /! .entry-header
   .entry-content
     = raw @post.the_content
-  /! .entry-content
-  footer.entry-meta
-    /! custom fields
-    - if @post.render_fields.present?
-      hr/
-      h4= ct("extra_attributes")
-      = raw @post.render_fields
-  /! .entry-meta
-/! #post
-= render partial: 'partials/comments', locals: {post: @post} if @post.can_commented?
+  = render partial: 'partials/comments', locals: {post: @post} if @post.can_commented?
