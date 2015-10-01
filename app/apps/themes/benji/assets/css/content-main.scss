@@ -1,18 +1,71 @@
 .content {
   @include center($medium);
+  margin-top: -2rem;
+  background-color: $color-light;
+}
+#portfolio {
+  @include center(960px);
+  padding-top: 10px;
+  img {
+    width: 100%;
+  }
+  h3 {
+    color: $color-dark;
+    font-family: $font-heading;
+  }
+  p {
+    color: $color-dark;
+    font-size: $font-small;
+    line-height: 1.5rem;
+  }
+}
+.more-portfolio {
+  padding-top: 4rem;
+  @include center($xsmall);
+  text-align: center;
+  color: $color-fifth;
+  font-size: $font-xsmall;
+  span {
+    background: $color-light;
+    padding: 0 1.6rem;
+  }
+}
+.more-blog {
+  @include center($xsmall);
+  padding-bottom: 4rem;
+  text-align: center;
+  color: $color-fifth;
+  font-size: $font-xsmall;
+  span {
+    background: $color-light;
+    padding: 0 1.6rem;
+  }
+}
+.more-lines {
+  position: relative;
+  display: block;
+  z-index: 1;
+  &:before {
+    border-top: 2px solid rgba($color-dark, 0.3);
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
 }
 .main-titles {
   font-family: $font-heading;
-  font-size: 4rem;
+  font-size: $font-xlarge;
   letter-spacing: 1.1rem;
-  color: $color-dark;
+  color: rgba($color-dark, 0.6);
   text-align: center;
+  padding: 4rem 0;
 }
 .title-with-lines {
   font-family: $font-heading;
-  font-size: 4rem;
-  letter-spacing: 1.1rem;
-  color: $color-dark;
+  font-size: $font-xlarge;
   text-align: center;
   position: relative;
   display: block;
@@ -34,32 +87,64 @@
   }
 }
 .post-title {
-  color: $color-light;
-  text-transform: capitalize;
+  text-transform: uppercase;
   padding-bottom: 0rem;
-  border-bottom: 4px solid rgba($color-secondary, 1);
-  margin-bottom: 1px;
-  span {
-    background-color: $color-secondary;
-    padding: .3rem;
+  text-align: center;
+  font-size: $font-xlarge;
+  a {
+    color: rgba($color-dark, .75);
+    text-decoration: none;
   }
 }
 .post-date {
-  color: $color-light;
+  border-bottom: 4px solid rgba($color-secondary, .6);
   font-size: $font-xsmall;
-  text-align: right;
+  text-align: center;
+  padding-bottom: .35rem;
+  color: $color-light;
   font-style: italic;
-  margin-top: 0;
   span {
-    background-color: $color-secondary;
-    padding: .3rem;
+    background: rgba($color-secondary, .6);
+    padding: .35rem;
   }
 }
+.post-date-with-lines {
+  font-size: $font-xsmall;
+  color: $color-secondary;
+  text-align: center;
+  position: relative;
+  display: block;
+  z-index: 1;
+  &:before {
+    border-top: 2px solid rgba($color-secondary, .6);
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  span {
+    background-color: $color-light;
+    padding: 0 1.6rem;
+  }
+}
+
 .post-text-container {
   line-height: 1.5rem;
   color: $color-dark;
   margin-bottom: 4rem;
   p {
     @include center(96%);
+    column-count: 2;
+    -webkit-column-count: 2;
   }
+}
+.post-text-container > p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+.post-text-container > p:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }

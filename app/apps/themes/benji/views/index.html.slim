@@ -1,30 +1,35 @@
 #portfolio
-  h2.title-with-lines
-    span Portfolio
   - if @portfolio_posts
     - @portfolio_posts.each do |entry|
-      - portfolio = entry.decorate
-      - if portfolio.has_thumb?
-        = link_to "#{portfolio.slug}.html"
-          .entry-thumbnail
-            = raw portfolio.the_thumb
-      h3
-        = portfolio.the_title
-      p
-        = raw portfolio.the_content
+      .main-column-3
+        - portfolio = entry.decorate
+        - if portfolio.has_thumb?
+          = link_to "#{portfolio.slug}.html"
+            .entry-thumbnail
+              = raw portfolio.the_thumb
+        h3
+          = portfolio.the_title
+        p
+          = raw portfolio.the_content
+.more-portfolio
+  p.more-lines
+    span more from my portfolio
 #posts
-h2.title-with-lines
-  span Latest Posts
+  h2.main-titles
+    span Latest Posts
   - if @posts
     - @posts.each do |entry|
       - post = entry.decorate
+      p.post-date-with-lines
+        span
+          = post.created_at.strftime("%d %B %Y")        
       h3.post-title
         span
           = link_to "#{post.slug}.html"
             = post.the_title
-      p.post-date
-        span
-          = post.created_at.strftime("%d %B %Y")
       .post-text-container
         p
           = raw post.the_content
+.more-blog
+  p.more-lines
+    span more from my blog

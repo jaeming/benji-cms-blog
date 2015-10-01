@@ -6,11 +6,11 @@ footer {
   font-size: $font-xsmall;
   color: $color-light;
   a {
-    color: $color-light;
+    color: rgba($color-light, .6);
     text-decoration: none;
     transition: ease all 250ms;
     &:hover {
-      color: $color-secondary;
+      color: $color-light;
     }
   }
   ul {
