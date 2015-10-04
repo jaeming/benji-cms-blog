@@ -1,6 +1,6 @@
 = render partial: 'partials/header'
 .content
-  #portfolio
+  #portfolio-main
     - if @portfolio_posts
       - @portfolio_posts.each do |entry|
         .main-column-3
@@ -16,7 +16,7 @@
   .more-portfolio
     p.more-lines
       span more from my portfolio
-  #posts
+  #posts-main
     h2.main-titles
       span Latest Posts
     - if @posts
