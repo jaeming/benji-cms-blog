@@ -6,6 +6,9 @@ header {
   color: $color-light;
   height: 30rem;
 }
+.header-small {
+  height: 15rem;
+}
 .header-main-container {
   @include center($medium);
   padding-top: 9rem;
