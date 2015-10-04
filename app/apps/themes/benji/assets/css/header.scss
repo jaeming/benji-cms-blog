@@ -6,9 +6,6 @@ header {
   color: $color-light;
   height: 30rem;
 }
-.header-small {
-  height: 15rem;
-}
 .header-main-container {
   @include center($medium);
   padding-top: 9rem;
@@ -97,4 +94,27 @@ nav {
 }
 .img-responsive {
   max-width: 7.5rem;
+}
+
+// SMALL HEADER
+
+.header-small {
+  height: 15rem;
+}
+.header-main-container-small {
+  @include center($medium);
+  padding-top: 4.5rem;
+}
+.header-container-small {
+  @include center(410px);
+}
+.header-img-container-small {
+  display: inline-block;
+  padding-right: 2rem;
+}
+.header-titles-container-small {
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  padding-top: 1rem;
 }
