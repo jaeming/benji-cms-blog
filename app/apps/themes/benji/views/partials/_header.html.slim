@@ -3,7 +3,7 @@ header
     .header-login-container
         ul.admin
           li
-            img src="= current_user.decorate.the_avatar" style=("max-width: 24px; border-radius: 50%") /
+            img src= current_user.decorate.the_avatar style=("max-width: 24px; border-radius: 50%") /
             = current_user.username
           li
             = link_to admin_dashboard_path
