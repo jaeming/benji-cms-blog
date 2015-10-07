@@ -3,6 +3,13 @@
   margin-top: -2rem;
   background-color: $color-light;
 }
+.portfolio-section {
+  background: $color-light;
+  margin-bottom: 10rem;
+}
+.posts-section {
+  background: #fff;
+}
 #portfolio-main {
   @include center(960px);
   padding-top: 10px;
@@ -32,6 +39,7 @@
 }
 .more-blog {
   @include center($xsmall);
+  margin-top: 2rem;
   padding-bottom: 4rem;
   text-align: center;
   color: $color-fifth;
@@ -56,12 +64,17 @@
   }
 }
 .main-titles {
+  span {
+    background: #fff;
+    padding: 0 2rem 0 2rem;
+  }
+  line-height: 1;
   font-family: $font-heading;
-  font-size: $font-xlarge;
-  letter-spacing: 1.1rem;
-  color: rgba($color-dark, 0.6);
+  font-size: 5rem;
+  color: rgb(86, 86, 86);
   text-align: center;
-  padding: 4rem 0;
+  padding: 0;
+  margin: -1rem 0 10rem 0;
 }
 .title-with-lines {
   font-family: $font-heading;
@@ -87,10 +100,13 @@
   }
 }
 .post-title {
-  text-transform: uppercase;
+  font-family: $font-thin;
+  font-weight: 200;
   padding-bottom: 0rem;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
-  font-size: $font-xlarge;
+  font-size: 3rem;
   a {
     color: rgba($color-dark, .75);
     text-decoration: none;
@@ -131,20 +147,39 @@
 }
 
 .post-text-container {
+  margin-bottom: 1rem;
   line-height: 1.5rem;
   color: $color-dark;
-  margin-bottom: 4rem;
+  max-height: 18rem;
+  overflow: hidden;
+  position: relative;
   p {
     @include center(96%);
-    column-count: 2;
-    -webkit-column-count: 2;
   }
 }
-.post-text-container > p:first-child {
-  margin-top: 0;
-  padding-top: 0;
+.post-fade-out {
+  width: 100%;
+  height: 11rem;
+  z-index: 99;
+  position: absolute;
+  bottom: 0px;
+  background: -moz-linear-gradient(top, rgba(#ffffff,0) 0%, rgba(#ffffff,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(#ffffff,0)), color-stop(100%,rgba(#ffffff,1)));
+  background: -webkit-linear-gradient(top, rgba(#ffffff,0) 0%,rgba(#ffffff,1) 100%);
+  background: -o-linear-gradient(top, rgba(#ffffff,0) 0%,rgba(#ffffff,1) 100%);
+  background: -ms-linear-gradient(top, rgba(#ffffff,0) 0%,rgba(#ffffff,1) 100%);
+  background: linear-gradient(to bottom, rgba(#ffffff,0) 0%,rgba(#ffffff,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
 }
-.post-text-container > p:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.post-read-more {
+  font-size: .9rem;
+  font-family: helvetica;
+  color: rgba(58, 154, 217, 0.6);
+  margin-left: 1rem;
+  padding: .4rem;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  &:hover {
+    color: darken(rgba(58, 154, 217, 0.6), 15%);
+  }
 }

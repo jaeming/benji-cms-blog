@@ -8,9 +8,10 @@ $color-dark: #555555;
 $color-light: whitesmoke;
 
 //TYPOGRAPHY
-@import url(http://fonts.googleapis.com/css?family=Lobster|Arimo:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lobster|Arimo:400,700|Raleway:200,400);
 $font-heading: 'Lobster', cursive;
 $font-body: 'Arimo', sans-serif;
+$font-thin: 'Raleway', sans-serif;
 $font-xlarge: 3rem;
 $font-large: 2rem;
 $font-medium: 1.3rem;

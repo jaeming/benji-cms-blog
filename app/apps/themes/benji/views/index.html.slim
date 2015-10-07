@@ -1,5 +1,5 @@
 = render partial: 'partials/header'
-.content
+.content.portfolio-section
   #portfolio-main
     - if @portfolio_posts
       - @portfolio_posts.each do |entry|
@@ -16,22 +16,27 @@
   .more-portfolio
     p.more-lines
       span more from my portfolio
-  #posts-main
-    h2.main-titles
-      span Latest Posts
-    - if @posts_entries
-      - @posts_entries.each do |entry|
-        - post = entry.decorate
-        p.post-date-with-lines
-          span
-            = post.created_at.strftime("%d %B %Y")
-        h3.post-title
-          span
-            = link_to "#{post.slug}.html"
-              = post.the_title
-        .post-text-container
-          p
-            = raw post.the_content
-  .more-blog
-    p.more-lines
-      span more from my blog
+.posts-section
+  .content.posts-section
+    #posts-main
+      h2.main-titles
+        span latest thoughts
+      - if @posts_entries
+        - @posts_entries.each do |entry|
+          - post = entry.decorate
+          h3.post-title
+            span
+              = link_to "#{post.slug}.html"
+                = post.the_title
+          p.post-date-with-lines
+            span
+              = post.created_at.strftime("%d %B %Y")
+          .post-text-container
+            p
+              = raw post.the_content
+            .post-fade-out
+          = link_to "#{post.slug}.html", class: "post-read-more"
+            | read more...
+      .more-blog
+        p.more-lines
+          span more from my blog
