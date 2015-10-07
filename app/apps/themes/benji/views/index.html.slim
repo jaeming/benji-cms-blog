@@ -19,8 +19,8 @@
   #posts-main
     h2.main-titles
       span Latest Posts
-    - if @posts
-      - @posts.each do |entry|
+    - if @posts_entries
+      - @posts_entries.each do |entry|
         - post = entry.decorate
         p.post-date-with-lines
           span

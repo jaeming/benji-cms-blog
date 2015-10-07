@@ -9,10 +9,12 @@ class FrontendController < CamaleonController
   # rescue_from ActiveRecord::RecordNotFound, with: :page_not_found
 
   def index
-    portfolio_group = PostType.find_by(slug: "portfolio")
-    post_group = PostType.find_by(slug: "post")
-    @posts = post_group.posts.where(status: "published").take(3) if post_group
-    @portfolio_posts = portfolio_group.posts.where(status: "published").take(3) if portfolio_group
+    if post_group = PostType.find_by(slug: "post")
+      @posts_entries = post_group.posts.where(status: "published").take(3)
+    end
+    if portfolio_group = PostType.find_by(slug: "portfolio")
+      @portfolio_posts = portfolio_group.posts.where(status: "published").take(3)
+    end
     init_seo(current_site)
     r = {layout: (self.send :_layout), render: "nil", custom: false}; hooks_run("on_render_index", r)
     if r[:custom]
