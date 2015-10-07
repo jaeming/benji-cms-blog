@@ -2,16 +2,15 @@
 .content
   article#post_type-view class="post_type_#{@post_type.slug}"
     = render partial: 'partials/search_form'
-    h1= @post_type.the_title
-    .content
-      = raw @post_type.the_content
-    br/
-    br/
     - if @categories.present?
-        h2 Categories
-        = render partial: "partials/categories_list", locals: {categories: @categories}
+      .sidebar
+        hr
+          h5 Categories
+          = render partial: "partials/categories_list", locals: {categories: @categories}
+        hr    
     .row
       - @posts.each_with_index do |post, index|
         = render partial: 'partials/post_list_item', locals: {post: post.decorate}
-    = content_tag("div", raw(ct('no_contents_found')), class: "alert alert-warning") if @posts.empty?
+    - if @posts.empty?
+      h2 Coming soon
     = will_paginate @posts, renderer: BootstrapPagination::Rails if @posts.present?

@@ -1,0 +1,6 @@
+#categories_list
+  - categories.each_slice(6).each_with_index do |_cats, index|
+    - _cats.each do |cat|
+      a href=cat.the_url 
+        small = cat.the_title
+        br
