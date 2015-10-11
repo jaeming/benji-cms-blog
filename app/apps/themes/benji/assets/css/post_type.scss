@@ -1,0 +1,52 @@
+#blog-content {
+
+}
+.blog-posts-list {
+  @include column(3/4);
+}
+.sidebar {
+  @include column(1/4);
+  color: rgba($color-dark, .8);
+  hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba($color-secondary, 0), rgba($color-secondary, 0.75), rgba($color-secondary, 0));
+  }
+}
+.blog-sidebar {
+  background-color: rgba($color-secondary, .3);
+  margin: .4rem;
+}
+.blog-search {
+  padding: .4rem .8rem;
+}
+.blog-categories {
+  padding: .4rem .8rem;
+  h5 {
+    margin: 0;
+    font-family: $font-thin;
+    font-weight: 400;
+    font-size: $font-medium;
+    margin-bottom: 1rem;
+  }
+  a {
+    color: rgba($color-dark, .6);
+    text-decoration: none;
+    transition: ease all 250ms;
+    &:hover {
+      color: rgba($color-fifth, .9);
+      border-bottom: 4px solid $color-fifth;
+    }
+  }
+}
+.post-date-with-lines-post {
+    background-color: $color-light;
+    padding: 0 1.6rem;
+}
+article {
+  p {
+    color: $color-dark;
+    font-size: $font-small;
+    line-height: 1.5rem;
+  }
+}

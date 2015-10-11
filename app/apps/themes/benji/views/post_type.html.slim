@@ -1,16 +1,20 @@
 = render partial: 'partials/header_small'
-.content
+.content#blog-content
   article#post_type-view class="post_type_#{@post_type.slug}"
-    = render partial: 'partials/search_form'
-    - if @categories.present?
-      .sidebar
-        hr
-          h5 Categories
-          = render partial: "partials/categories_list", locals: {categories: @categories}
-        hr    
-    .row
+    .blog-posts-list
       - @posts.each_with_index do |post, index|
         = render partial: 'partials/post_list_item', locals: {post: post.decorate}
     - if @posts.empty?
-      h2 Coming soon
+      h3.post-title Coming Soon
     = will_paginate @posts, renderer: BootstrapPagination::Rails if @posts.present?
+    .sidebar
+      .blog-sidebar
+        .blog-search
+          = render partial: 'partials/search_form'
+        .blog-categories  
+          - if @categories.present?
+            hr
+              h5 Categories
+              = render partial: "partials/categories_list", locals: {categories: @categories}
+            hr    
+    

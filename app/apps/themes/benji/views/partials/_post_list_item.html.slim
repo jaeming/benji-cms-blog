@@ -1,8 +1,10 @@
 article
   = raw post.the_link_thumb() if post.has_thumb?
-  h2
+  h2.post-title
     a href=post.the_url rel="bookmark" = post.the_title
-  small = post.created_at.strftime("%d %B %Y")
+  p.post-date-with-lines
+    span.post-date-with-lines-post
+      small = post.created_at.strftime("%d %B %Y")
   / = raw get_taxonomy(post.the_categories.decorate, 'category tag')
   / = raw get_taxonomy(post.the_tags.decorate, 'tag')
   = raw post.the_content
